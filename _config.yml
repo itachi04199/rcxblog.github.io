@@ -3,7 +3,7 @@ highlighter: null
 permalink: /:title
 
 url:
-baseurl:http://renchunxiao.github.io/rcxblog.github.io/
+baseurl:/renchunxiao.github.io/rcxblog.github.io/
 
 redcarpet:
   extensions: [strikethrough, tables]
