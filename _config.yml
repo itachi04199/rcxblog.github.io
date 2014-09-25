@@ -12,9 +12,3 @@ sass:
   sass_dir: public/css
   style: :compressed
 
-comments :
-  provider : duoshuo
-  duoshuo :
-    short_name : liberize
-  disqus :
-      short_name : liberize
