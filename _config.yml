@@ -2,8 +2,8 @@ markdown: redcarpet
 highlighter: null
 permalink: /:title
 
-url:
-baseurl:/renchunxiao.github.io/rcxblog.github.io/
+url: http://renchunxiao.github.io/
+baseurl:/
 
 redcarpet:
   extensions: [strikethrough, tables]
