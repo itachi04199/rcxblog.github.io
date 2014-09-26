@@ -1,6 +1,7 @@
 markdown: redcarpet
 highlighter: null
 permalink: /:title
+pygments: true
 
 url: http://renchunxiao.github.io/
 baseurl: /rcxblog.github.io
