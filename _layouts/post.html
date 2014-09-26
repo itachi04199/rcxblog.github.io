@@ -5,7 +5,7 @@ layout: default
 <article class="single row gutters">
   <time class="published" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
   <h2>{{ page.title }}</h2>
-
+  <link rel="stylesheet" href="{{site.baseurl}}/public/css/pygments.css">
   {{ content }}
   
 <!-- 多说评论框 start -->
