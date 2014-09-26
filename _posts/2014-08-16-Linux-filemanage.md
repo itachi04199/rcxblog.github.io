@@ -30,7 +30,7 @@ tags: linux 基础 笔记
 
 使用touch命令创建文件：
 
-```shell
+```
 touch test.txt  #创建名为test.txt的文件
 ```
 
@@ -38,13 +38,13 @@ touch test.txt  #创建名为test.txt的文件
 
 删除文件：rm
 
-```shell
+```
 rm test.txt
 ```
 
 移动或重命名文件：mv
 
-```shell
+```
 mv test.txt /test/   #移动文件到/test 目录下
 mv test.txt test.md  #将文件改名为test.md
 mv test.txt /test/test.md #移动文件并且改名
@@ -52,21 +52,21 @@ mv test.txt /test/test.md #移动文件并且改名
 
 查看文件：cat,该命令是concatenate的简写。
 
-```shell
+```
 cat test.txt    #查看文件内容
 cat -n test.txt #-n 参数可以显示每行的行号
 ```
 
 查看文件头：head,有时候文件非常大，cat查看出来的内容太多，我们只想看文件的开头部分。head默认显示前10行内容。
 
-```shell
+```
 head test.txt       #显示文件前10行
 head -n 20 test.txt #显示文件前20行
 ```
 
 查看文件尾部：tail，基本与head相似只是查看文件的后面行数,默认显示最后10行，也可以使用-n参数来指定。
 
-```shell
+```
 tail test.txt
 tail -n 20 test.txt
 tail -f test.txt  #使用-f参数可以动态查看这个文件，用于查看日志。
@@ -74,20 +74,20 @@ tail -f test.txt  #使用-f参数可以动态查看这个文件，用于查看�
 
 进入目录：cd（change directory）
 
-```shell
+```
 cd /tmp   #进入tmp目录
 ```
 
 创建目录：mkdir
 
-```shell
+```
 mkdir dir1   #创建dir1目录
 mkdir -p dir2/dir3/dir4 #一次性创建多级目录
 ```
 
 删除目录：rmdir和rm,rmdir这个命令是可以删除空目录。(r  recursive，递归。)所以一般对文件夹进行操作的都会加上-r参数。
 
-```shell
+```
 rmdir dir3
 rm -r dir1  #删除dir1目录下的所有文件
 rm -rf dir1 #删除dir1目录，并且不需要确认
@@ -95,7 +95,7 @@ rm -rf dir1 #删除dir1目录，并且不需要确认
 
 文件和目录的复制：cp
 
-```shell
+```
 cp a b #复制a，新文件名称是b
 cp a /dir/b #将a文件复制到dir目录下，文件名叫b
 cp a /dir/  #将a文件复制到dir目录下，文件名叫a
@@ -104,7 +104,7 @@ cp -r dir dir2 #复制文件夹，-r参数
 
 查看文件或目录的权限：
 
-```shell
+```
 ls -al
 
 总用量 24
@@ -135,20 +135,20 @@ drwxrwxr-x  4 chunxiao chunxiao 4096  8月 16 13:22 dir
 
 文件还有一些隐藏属性，必须用lsattr来显示：
 
-```shell
+```
 lsattr a.txt  #显示结果如下
 -------------e- a.txt
 ```
 
 如果需要设置隐藏属性需要使用chattr命令。可以给文件增加a属性，a属性即使是root用户也不可以删除这个文件，只能在文件尾部追加。
 
-```shell
+```
 chattr +a a.txt
 ```
 
 改变文件权限：chmod,linux下的每一个文件都定义了所有者(user),所属组(group),其他人(others)，我们可以使用u、g、o来代表他们。增加权限使用+，减少权限用-，详细权限用=。请看下面的例子：
 
-```shell
+```
 chmod u+r a.txt
 chmod u-r a.txt
 chmod u=rw- a.txt
@@ -156,14 +156,14 @@ chmod u=rw- a.txt
 
 上面只是对u进行操作权限，其他的跟这个类似，这个方式很麻烦，如果想同时想对u、g、o进行操作需要操作3次。所以，我们定义r=4,w=2,x=1，如果权限是rwx，则数字表示为7，如果权限是r-x，则数字表示为5。那么就可以使用下面的方式来改变权限。
 
-```shell
+```
 chmod 754 a.txt
 chmod -R 754 dir  #给目录授权，使用-R参数，这个目录下面所有文件和子目录都是754这个权限。
 ```
 
 改变文件的所有者：chown，同时还具备修改所属组的功能。
 
-```shell
+```
 chown john a.txt  #将a.txt的所有者改成john
 chown :john a.txt #将a.txt的所属组改成john
 chown -R john dir #修改目录的所有者为john
@@ -172,14 +172,14 @@ chown -R john:john dir #同时对目录修改所有者和所属组
 
 还可以使用chgrp来改变所属组：
 
-```shell
+```
 chgrp tom a.txt
 chgrp -R tom dir
 ```
 
 默认权限和umask，当新创建个文件或者目录的时候这个文件和目录会有默认的权限，这个权限是如何而来，首先看下默认的权限是什么：
 
-```shell
+```
 touch y
 ls -l y  #输出如下
 -rw-rw-r-- 1 chunxiao chunxiao 0  8月 16 15:29 y
@@ -194,14 +194,14 @@ drwxrwxr-x  2 chunxiao chunxiao 4096  8月 16 15:31 d
 
 file命令查看文件类型，前面已经讲到了ls命令输入的几种文件类型。
 
-```shell
+```
 file a.txt  #查看文件
 file /tmp   #查看目录
 ```
 
 一般查找：find，详细用法参见man find
 
-```shell
+```
 find PATH -name FileName
 find / -name passwd   在/目录下查找文件名为passwd的文件
 ```
@@ -210,7 +210,7 @@ find / -name passwd   在/目录下查找文件名为passwd的文件
 
 查找执行文件：which/whereis
 
-```shell
+```
 which passwd   #输出如下
 /usr/bin/passwd
 
@@ -221,14 +221,14 @@ passwd: /usr/bin/passwd /etc/passwd /usr/bin/X11/passwd /usr/share/man/man5/pass
 
 文件压缩和打包，gzip/gunzip用来压缩和解压缩单个文件的工具。
 
-```shell
+```
 gzip install.log   #gzip后原文件变成压缩的
 gunzip install.log.gz #gunzip后压缩文件变成原文件
 ```
 
 tar命令可以打包文件，还可以把整个目录整合成一个包，整合包的同时还可以同时使用gzip的功能进行压缩。
 
-```shell
+```
 tar -zcvf dir.tar.gz dir/  #-z是代表使用gzip，-c是创建压缩文件，-v是显示当前被压缩的文件，-f是指使用文件名。
 ```
 
