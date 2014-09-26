@@ -184,6 +184,4 @@ su tom #切换到tom用户，需要知道tom的密码。
 sudo cat /etc/shadow
 ```
 
-本篇完
-
-END
+---EOF---
