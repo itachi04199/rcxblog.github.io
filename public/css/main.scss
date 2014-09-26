@@ -24,7 +24,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: $contrast-color;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
 
   -webkit-font-smoothing: antialiased;
 }
@@ -129,11 +129,11 @@ footer {
 /*----------------------------------------------------------------------------*/
 
 .highlight {
-  padding: 30px;
+  padding: 10px;
   border-radius: 6px;
-  background-color: #272822;
-  color: #f8f8f2;
-  line-height: 1;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.5;
 
   code {
     font-size: .7rem;
