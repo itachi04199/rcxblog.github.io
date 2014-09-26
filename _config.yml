@@ -1,14 +1,13 @@
 markdown: redcarpet
+
 redcarpet: 
   extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+
 highlighter: pygments
 permalink: /:title
 
 url: http://renchunxiao.github.io/
 baseurl: /rcxblog.github.io
-
-redcarpet:
-  extensions: [strikethrough, tables]
 
 sass:
   sass_dir: public/css
