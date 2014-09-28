@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 把控制流变得易读
-categories: 编写可读代码的艺术读书笔记
-tags: 笔记 代码美化
+categories: 代码优化
+tags: 笔记 代码优化
 ---
 
 ## 第七章 把控制流变得易读
