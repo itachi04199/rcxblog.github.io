@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux shell 小试牛刀
-categories: linux shell脚本攻略读书笔记
+categories: linux
 tags: linux shell
 ---
 

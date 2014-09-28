@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 正则表达式
-categories: 正则表达式 学习笔记
+categories: 正则表达式
 tags: 正则表达式
 ---
 

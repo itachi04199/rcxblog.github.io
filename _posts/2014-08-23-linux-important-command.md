@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux重要命令
-categories: linux 学习笔记
+categories: linux
 tags: linux
 ---
 

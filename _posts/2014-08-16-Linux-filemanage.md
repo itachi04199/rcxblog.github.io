@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux 文件管理
-categories: linux 学习笔记
+categories: linux 
 tags: linux 基础 笔记
 ---
 ### Linux文件管理

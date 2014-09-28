@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux 用户管理
-categories: linux 学习笔记
+categories: linux
 tags: linux
 ---
 
