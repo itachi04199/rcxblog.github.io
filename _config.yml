@@ -6,7 +6,7 @@ permalink: /:title
 redcarpet:
   extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 
-url: http://renchunxiao.github.io/
+url: http://renchx.com/
 baseurl: /rcxblog.github.io
 
 sass:
