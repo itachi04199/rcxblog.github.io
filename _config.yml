@@ -7,7 +7,6 @@ redcarpet:
   extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 
 url: http://renchx.com/
-baseurl: /
 
 sass:
   sass_dir: public/css
