@@ -33,7 +33,7 @@ Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，�
 - 类似 `.row` 和 `.col-xs-4` 这种预定义的类，可以用来快速创建栅格布局。
 - 如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列。
 
-一般“列”（column）会有几种前缀，只是列的具体宽度会不同，详细见[bootstrap列参数](!http://v3.bootcss.com/css/#grid-options)：
+一般“列”（column）会有几种前缀，只是列的具体宽度会不同，详细见[bootstrap列参数](http://v3.bootcss.com/css/#grid-options)：
 
 - `.col-xs-`
 - `.col-sm-`
