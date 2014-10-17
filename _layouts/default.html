@@ -14,7 +14,8 @@
       </header>
 
       {{ content }}
-
+	
+      <div id="top"></div>
       <footer>
         <p><small>
             Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/{{ site.github }}/rcxblog.github.io" target="_blank" title="项目主页">GitHub</a>
@@ -26,6 +27,7 @@
     <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{site.baseurl}}/public/js/jquery.fitvids.js"></script>
+    <script src="{{site.baseurl}}/public/js/top.js"></script>
     <script>
       $(document).ready(function(){
         $("article").fitVids();

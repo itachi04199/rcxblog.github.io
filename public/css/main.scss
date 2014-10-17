@@ -129,6 +129,11 @@ footer {
 
 /*----------------------------------------------------------------------------*/
 
+.izl-rmenu{position:fixed; left:50%; margin-left:532px; bottom:10px; padding-bottom:73px; z-index:999; }
+.izl-rmenu .btn{width:72px; height:73px; margin-bottom:1px; cursor:pointer; position:relative;}
+.izl-rmenu .btn-top{background:url(/public/images/r_top.png) 0px 0px no-repeat; background-color:#666666; display:none;}
+.izl-rmenu .btn-top:hover{background-color:#444;}
+
 .highlight {
   padding: 10px;
   border-radius: 6px;
