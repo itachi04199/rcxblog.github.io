@@ -24,19 +24,19 @@ tags: j2ee sevlet
 
 下面详细描述容器的匹配过程：
 
-1. 精确路径匹配。
+1.精确路径匹配。
 
 例子：比如servletA 的url-pattern为 /test，servletB的url-pattern为 /* ，这个时候，如果我访问的url为http://localhost/test ，这个时候容器就会先进行精确路径匹配，发现/test正好被servletA精确匹配，那么就去调用servletA，也不会去理会其他的 servlet了。 
 
-2. 最长路径匹配。
+2.最长路径匹配。
 
 例子：servletA的url-pattern为/test/*，而servletB的url-pattern为/test/a/*，此时访问http://localhost/test/a时，容器会选择路径最长的servlet来匹配，也就是这里的servletB。 
 
-3. 扩展匹配，如果url最后一段包含扩展，容器将会根据扩展选择合适的servlet。
+3.扩展匹配，如果url最后一段包含扩展，容器将会根据扩展选择合适的servlet。
 
 例子：servletA的url-pattern：*.action 
 
-4. 如果前面三条规则都没有找到一个servlet，容器会根据url选择对应的请求资源。
+4.如果前面三条规则都没有找到一个servlet，容器会根据url选择对应的请求资源。
 如果应用定义了一个default servlet，则容器会将请求丢给default servlet（什么是default servlet？后面会讲）。 
 
 根据这个规则表，就能很清楚的知道servlet的匹配过程，所以定义servlet的时候也要考虑url-pattern的写法，以免出错。 
