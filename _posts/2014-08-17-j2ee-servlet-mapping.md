@@ -74,7 +74,7 @@ HttpServletRequest 提供3个方法 getContextPath(),getServletPath() 和getPath
 默认servlet匹配（上面匹配的第四条规则）： 如果没有默认的servlet，它会发送未找到指示的servlet的错误消息。
 通过例子来熟悉一下：
 
-```
+```xml
 <servlet-mapping>
     <servlet-name>RedServlet</servlet-name>
     <url-pattern>/red/*</url-pattern>
