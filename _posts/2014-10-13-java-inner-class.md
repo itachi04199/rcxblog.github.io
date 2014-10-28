@@ -259,7 +259,7 @@ class TopLevelClass
 }
 ```
 
-从什么的例子可以看出NestedTopLevelClass可以访问TopLevelClass的静态变量，但是不可以访问TopLevelClass的实例变量。因为NestedTopLevelClass是独立于任何TopLevelClass对象的。
+从上面的例子可以看出NestedTopLevelClass可以访问TopLevelClass的静态变量，但是不可以访问TopLevelClass的实例变量。因为NestedTopLevelClass是独立于任何TopLevelClass对象的。
 
 > 一个静态内部类不能访问任何外部类的实例成员(属性和方法)。
 
