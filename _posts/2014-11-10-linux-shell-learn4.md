@@ -9,7 +9,7 @@ tags: linux shell
 
 向shell脚本传递参数的最基本方式就是使用命令行参数。
 
-```baah
+```bash
 $ ./a.sh 10 30
 ```
 
