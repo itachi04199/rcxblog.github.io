@@ -379,7 +379,8 @@ public class Book {
 	private double price;
 
     public String toString() {
-    return Objects.toStringHelper(this).omitNullValues().add("title", title).add("author", author).add("publisher", publisher).add("price",price).add("isbn", isbn).toString();
+    return Objects.toStringHelper(this).omitNullValues().add("title", title).
+	add("author", author).add("publisher", publisher).add("price",price).add("isbn", isbn).toString();
 	}
 }
 ```
