@@ -1,3 +1,10 @@
+---
+layout: post
+title: 如何写注释
+categories: 代码优化
+tags: 笔记 代码优化
+---
+
 #### 代码审美
 
 - 使用一致布局，风格统一
