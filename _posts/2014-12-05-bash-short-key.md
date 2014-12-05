@@ -1,3 +1,10 @@
+---
+layout: post
+title: bash 快捷键
+categories: linux 
+tags: linux shell
+---
+
 介绍一些 bash 常用的快捷键，zsh 的快捷键基本上适用
 
 快捷键|功能
