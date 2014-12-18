@@ -18,8 +18,8 @@ Class 文件是一组以8位字节位基础单元的二进制流，各个数据�
 u4|magic|1
 u2|minor_version|1
 u2|major_version|1
-u2|constant_pool_count|1
-cp_info|constant_pool|constant_pool_count - 1
+u2|`constant_pool_count`|1
+cp_info|constant_pool|`constant_pool_count ` - 1
 u2|access_flags|1
 u2|this_class|1
 u2|super_class|1
@@ -56,22 +56,22 @@ Class 文件结构中只有常量池的容量计数是从1开始的，其他的�
 
 类型|标志|描述
 :--|:--|:--
-CONSTANT_Utf8_info|1|utf-8缩略编码字符串
-CONSTANT_Integer_info|3|整型字面量
-CONSTANT_Float_info|4|浮点型字面量
-CONSTANT_Long_info|5|长整型字面量
-CONSTANT_Double_info|6|双精度浮点型字面量
-CONSTANT_Class_info|7|类或接口的符号引用
-CONSTANT_String_info|8|字符串类型字面量
-CONSTANT_Fieldref_info|9|字段的符号引用
-CONSTANT_Methodref_info|10|类中方法的符号引用
-CONSTANT_InterfaceMethodref_info|11|接口中方法的符号引用
-CONSTANT_NameAndType_info|12|字段或方法的部分符号引用
+`CONSTANT_Utf8_info`|1|utf-8缩略编码字符串
+`CONSTANT_Integer_info`|3|整型字面量
+`CONSTANT_Float_info`|4|浮点型字面量
+`CONSTANT_Long_info`|5|长整型字面量
+`CONSTANT_Double_info`|6|双精度浮点型字面量
+`CONSTANT_Class_info`|7|类或接口的符号引用
+`CONSTANT_String_info`|8|字符串类型字面量
+`CONSTANT_Fieldref_info`|9|字段的符号引用
+`CONSTANT_Methodref_info`|10|类中方法的符号引用
+`CONSTANT_InterfaceMethodref_info`|11|接口中方法的符号引用
+`CONSTANT_NameAndType_info`|12|字段或方法的部分符号引用
 
 常量池当中的11种数类型的结构总表如下图：
 
 ![常量池1](http://renchx.com/public/images/constant1.png)
-![常量池2]((http://renchx.com/public/images/constant2.png)
+![常量池2](http://renchx.com/public/images/constant2.png)
 
 #### 访问标志
 
@@ -99,13 +99,13 @@ ACC_ENUM|0x4000|标识这是一个枚举
 
 #### 类索引、父类索引与接口索引集合
 
-- u2 this_class 表示类的常量池索引，指向常量池中 CONSTANT_Class_info 的常量
+- u2 `this_class` 表示类的常量池索引，指向常量池中 `CONSTANT_Class_info` 的常量
 
-- u2 super_class 表示超类的索引，指向常量池中 CONSTANT_Class_info 的常量
+- u2 `super_class` 表示超类的索引，指向常量池中 `CONSTANT_Class_info` 的常量
 
 - u2 interfaces_counts 表示接口的数量
 
-- u2 interfaces[interfaces_counts]表示接口表，它里面每一项都指向常量池中 CONSTANT_Class_info 常量
+- u2 interfaces[interfaces_counts]表示接口表，它里面每一项都指向常量池中 `CONSTANT_Class_info` 常量
 
 Class 文件中由这三项数据来确定整类的继承关系。由于 Java 是单继承，所以父类索引只有一个，除了 java.lang.Object 外，所有 Java 类的父类索引都不是0。
 
@@ -125,7 +125,7 @@ u2|attributes|attributes_count
 
 字段表集合当中不会包含超类或者父类接口中继承而来的字段，但是有可能包含不存在的字段，例如内部类中为了保持对外部类的访问性，就会自动添加指向外部类实例的字段。
 
-字段修饰符放在 access_flags 项目中，它与类中的 access_flags 项目是类似的都是一个 u2 的数据类型，具体标志位如下表：
+字段修饰符放在 `access_flags` 项目中，它与类中的 `access_flags` 项目是类似的都是一个 u2 的数据类型，具体标志位如下表：
 
 标志名称|标志值|含义
 :--|:--|:--
@@ -217,4 +217,4 @@ LocalVaribaleTable|Code 属性|方法的局部变量描述
 SourceFile|类文件|源文件名称
 Synthetic|类、方法表、字段表|标识方法或字段为编译器自动生成的
 
-对于每个属性，它的名称都需要从常量池中引用一个 CONSTANT_Utf8_info 类型的常量来表示，而属性的结构是完全自定义的，只需要说明属性值所占用的位数长度即可。
+对于每个属性，它的名称都需要从常量池中引用一个 `CONSTANT_Utf8_info` 类型的常量来表示，而属性的结构是完全自定义的，只需要说明属性值所占用的位数长度即可。
