@@ -105,7 +105,7 @@ ACC_ENUM|0x4000|标识这是一个枚举
 
 - u2 interfaces_counts 表示接口的数量
 
-- u2 interfaces[interfaces_counts]表示接口表，它里面每一项都指向常量池中 `CONSTANT_Class_info` 常量
+- u2 interfaces[`interfaces_counts`]表示接口表，它里面每一项都指向常量池中 `CONSTANT_Class_info` 常量
 
 Class 文件中由这三项数据来确定整类的继承关系。由于 Java 是单继承，所以父类索引只有一个，除了 java.lang.Object 外，所有 Java 类的父类索引都不是0。
 
