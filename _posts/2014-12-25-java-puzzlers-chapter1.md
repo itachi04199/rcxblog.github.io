@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java 解惑 -- 表达式谜题
-categories: Java 解惑
+categories: Java解惑
 tags: 笔记
 ---
 
