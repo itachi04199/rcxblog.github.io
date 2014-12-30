@@ -1,3 +1,10 @@
+---
+layout: post
+title: effective-java创建和销毁对象
+categories: effective-java
+tags: 笔记
+---
+
 #### 考虑用静态工厂方法代替构造器
 
 静态工厂方法与构造器不同的第一大优势在于，它们有名称。
