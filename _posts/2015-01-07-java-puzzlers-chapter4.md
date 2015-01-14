@@ -26,7 +26,7 @@ public class Indecisive {
 
 上面的代码输出结果是 false。
 
-详细的 try-catch-finally 的详见[这里]()
+详细的 try-catch-finally 的详见[这里](http://renchx.com/java-exception/)
 
 #### 是否编译报错
 
