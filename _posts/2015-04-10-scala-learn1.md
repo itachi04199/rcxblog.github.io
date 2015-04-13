@@ -243,5 +243,9 @@ val romanNumeral = Map(
 println(romanNumeral(4))
 ```
 
+【参考资料】
+
+1. [Scala编程](http://book.douban.com/subject/5377415/)
+
 ---EOF---
 
