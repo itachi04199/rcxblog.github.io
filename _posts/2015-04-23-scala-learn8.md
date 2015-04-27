@@ -192,7 +192,7 @@ object Rocket {
     def pickAStar() {}
 }
 ```
-
+ 
 Scala 的访问规则给予了伴生对象和类一些特权。类把它所有的访问权限共享给半生对象，反过来也是如此。上面的 Rocket 类可以访问方法 fuel，它在 Rocket 对象中被声明为私有，Rocket 对象也可以访问 Rocket 类里面的私有方法 canGetHome。
 
 【参考资料】
