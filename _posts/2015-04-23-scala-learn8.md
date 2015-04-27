@@ -89,7 +89,7 @@ import Fruits.{Pear => _, _} // 引用了除 Pear 之外的所有 Fruits 成员�
 
 Scala隐式地添加了一些引用到每个程序中，如下这三个引用。
 
-```acala
+```scala
 import java.lang._ // java.lang 包的所有东西
 import scala._ // scala 包的所有东西
 import Predef._ // Predef 对象的所有东西
