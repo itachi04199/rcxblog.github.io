@@ -113,6 +113,6 @@ since: 2011
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repository: git@github.com:renchunxiao/rcxblog.github.io.git
   branch: gh-pages
