@@ -1,8 +1,8 @@
 ---
 layout: post
 title: lua字符串学习
-categories: lua，string
-tags: lua
+categories: lua
+tags: lua, string
 ---
 
 ### 基础字符串函数
