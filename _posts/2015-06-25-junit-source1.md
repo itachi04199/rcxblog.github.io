@@ -15,6 +15,8 @@ java -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore AppTe
 
 在 IDE 当中执行 Junit，如 eclipse 集成了 Junit 插件
 
+## 调用时序图
+
 ![执行时序图](http://renchx.com/public/images/junit4-1.png)
 
 ## JUnitCore
@@ -59,5 +61,8 @@ Client 会根据测试类或方法而创建一个 Request 实体，Request 包�
 
 单元测试执行完的结果，可以通过这个对象来描述当前单元测试的执行情况。
 
----EOF---
+【参考源码版本】
 
+1. Junit4.0
+
+---EOF---
