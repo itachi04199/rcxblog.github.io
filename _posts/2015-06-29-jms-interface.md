@@ -1,3 +1,10 @@
+---
+layout: post
+title: JMS 入门学习之概念及接口
+categories: jms
+tags: java, jms
+---
+
 ## JMS 概念
 
 JMS 有两种方式进行消息通信：Point-to-Point (P2P) 和 Publish/Subscriber (PUB/SUB)
