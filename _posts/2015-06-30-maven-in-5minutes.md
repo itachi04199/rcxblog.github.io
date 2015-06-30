@@ -1,6 +1,6 @@
 ---
 layout: post
-title:maven 5分钟入门
+title: maven 5分钟入门
 categories: maven
 tags: java, maven
 ---
