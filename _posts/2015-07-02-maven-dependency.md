@@ -31,7 +31,7 @@ maven 的传递依赖会自动引入当前引入的依赖的依赖。
 
 假设 A 依赖 B ， B 依赖 C ，我们称 A 对 B 是第一直接依赖， B 对 C 是第二直接依赖， A 对 C 是传递依赖。下表显示了三者的关系：
 
-![maven传递依赖]()
+![maven传递依赖](http://renchx.com/public/images/maven1.png)
 
 ## 依赖调解
 
