@@ -102,7 +102,7 @@ mvn clean install -Pdev
 ```xml
 <resources>
   <resource>
-    <directory>src/main/resources.${profile.dir}</directory>
+    <directory>src/main/profiles/.${profile.dir}</directory>
   </resource>
   <resource>
     <directory>src/main/resources</directory>
