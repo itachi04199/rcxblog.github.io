@@ -14,7 +14,7 @@ tags: 笔记 scala
 定义带参数的类的时候可以如下：
 
 ```scala
-calss Rational(n: Int, d: Int)
+class Rational(n: Int, d: Int)
 ```
 
 n 和 d 是类参数，编译器会收集这两个参数并创造一个带同样的两个参数的主构造器。
@@ -22,7 +22,7 @@ n 和 d 是类参数，编译器会收集这两个参数并创造一个带同样
 scala 编译器也会把在类内部的任何不是字段的部分或者方法，编译到主构造器中。
 
 ```scala
-calss Rational(n: Int, d: Int) {
+class Rational(n: Int, d: Int) {
 	println("Created "+n+"/"+d)
 }
 ```
