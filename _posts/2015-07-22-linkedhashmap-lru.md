@@ -147,7 +147,7 @@ private static class Entry<K,V> extends HashMap.Entry<K,V> {
 
 这个结构就是一个双向循环列表，所以 LinkedHashMap 的内部数据结构就是如下图：
 
-![LinkedHashMap数据结构]()
+![LinkedHashMap数据结构](http://renchx.com/public/images/linkedhash.png)
 
 ## 实现 LRU 算法
 
