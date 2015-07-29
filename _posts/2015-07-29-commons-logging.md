@@ -215,10 +215,10 @@ public static LogFactory getFactory() throws LogConfigurationException {
 - 读取配置文件 commons-logging.properties
 - 如果读到了配置文件，判断其中 use_tccl 属性，然后设定 baseClassLoader 是使用 contextClassLoader 还是使用加载 本Cla ss文件的那 个classloader（名字为thisClassLoader）
 - 下面生成 logFactory，这里会有使用四种方式，依次来尝试生成。
-		- 通过系统属性中寻找org.apache.commons.logging.LogFactory的value值，根据值为类名生成logFactory
-		- 通过资源META-INF/services/org.apache.commons.logging.LogFactory，获得的值为类名生成logFactory
-		- 通过刚才读取的配置文件commons-logging.properties，从中获取以org.apache.commons.logging.LogFactory为key的value值，根据值为类名生成logFactory
-		- 如果上面都不成功的话，会使用默认的实现类org.apache.commons.logging.impl.LogFactoryImpl来生成logFactory
+	- 通过系统属性中寻找org.apache.commons.logging.LogFactory的value值，根据值为类名生成logFactory
+	- 通过资源META-INF/services/org.apache.commons.logging.LogFactory，获得的值为类名生成logFactory
+	- 通过刚才读取的配置文件commons-logging.properties，从中获取以org.apache.commons.logging.LogFactory为key的value值，根据值为类名生成logFactory
+	- 如果上面都不成功的话，会使用默认的实现类org.apache.commons.logging.impl.LogFactoryImpl来生成logFactory
 - 将生成的 logFactory 缓存起来
 - 返回 logFactory
 
@@ -354,9 +354,9 @@ private String findUserSpecifiedLogClassName() {
 - 判断 instances.get(name) 获取的 log 是不是为空，为空去 newInstance
 - newInstance 当中会判断 logConstructor 是不是空，为空 discoverLogImplementation
 - discoverLogImplementation 会查找是不是自己定义实现的 Log 全路径，如果有就根据这个 class 全路径创建 log，如果没有就按照顺序创建 log 实例，顺序如下：
-		- org.apache.commons.logging.impl.Jdk14Logger
-		- org.apache.commons.logging.impl.Jdk13LumberjackLogger
-		- org.apache.commons.logging.impl.SimpleLog
+    - org.apache.commons.logging.impl.Jdk14Logger
+    - org.apache.commons.logging.impl.Jdk13LumberjackLogger
+    - org.apache.commons.logging.impl.SimpleLog
 
 
 下次会分析这些 Log 的实现方式，以及这个仅有10多个类组成的框架给我们什么样的启发，以及他的优缺点。
