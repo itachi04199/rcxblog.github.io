@@ -13,7 +13,7 @@ http://blog.csdn.net/yycdaizi/article/details/8276265
 
 ## 框架分析
 
-![包结构]()
+![包结构](http://renchx.com/public/images/commons-logging.png)
 
 使用方式：
 
@@ -215,10 +215,10 @@ public static LogFactory getFactory() throws LogConfigurationException {
 3. 读取配置文件 commons-logging.properties
 4. 如果读到了配置文件，判断其中 use_tccl 属性，然后设定 baseClassLoader 是使用 contextClassLoader 还是使用加载 本Cla ss文件的那 个classloader（名字为thisClassLoader）
 5. 下面生成 logFactory，这里会有使用四种方式，依次来尝试生成。
-		- 通过系统属性中寻找org.apache.commons.logging.LogFactory的value值，根据值为类名生成logFactory
-		- 通过资源META-INF/services/org.apache.commons.logging.LogFactory，获得的值为类名生成logFactory
-		- 通过刚才读取的配置文件commons-logging.properties，从中获取以org.apache.commons.logging.LogFactory为key的value值，根据值为类名生成logFactory
-		- 如果上面都不成功的话，会使用默认的实现类org.apache.commons.logging.impl.LogFactoryImpl来生成logFactory
+		1. 通过系统属性中寻找org.apache.commons.logging.LogFactory的value值，根据值为类名生成logFactory
+		2. 通过资源META-INF/services/org.apache.commons.logging.LogFactory，获得的值为类名生成logFactory
+		3. 通过刚才读取的配置文件commons-logging.properties，从中获取以org.apache.commons.logging.LogFactory为key的value值，根据值为类名生成logFactory
+		4. 如果上面都不成功的话，会使用默认的实现类org.apache.commons.logging.impl.LogFactoryImpl来生成logFactory
 6. 将生成的 logFactory 缓存起来
 7. 返回 logFactory
 
