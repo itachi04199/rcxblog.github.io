@@ -358,6 +358,7 @@ private String findUserSpecifiedLogClassName() {
     - org.apache.commons.logging.impl.Jdk13LumberjackLogger
     - org.apache.commons.logging.impl.SimpleLog
 
+总结下就是，commons-logging项目采用了一种动态搜索的机制，在实际运行时，动态的选择log 的实现方式。如果没有log4j，就使用jdk1.4的logging，如果再没有，就使用Lumberjack，它是为jdk1.2与1.3实现了Java日志 API，再没有，那就使用自身提供的一个log（SimpleLog）。
 
 下次会分析这些 Log 的实现方式，以及这个仅有10多个类组成的框架给我们什么样的启发，以及他的优缺点。
 
