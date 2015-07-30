@@ -354,6 +354,7 @@ private String findUserSpecifiedLogClassName() {
 - 判断 instances.get(name) 获取的 log 是不是为空，为空去 newInstance
 - newInstance 当中会判断 logConstructor 是不是空，为空 discoverLogImplementation
 - discoverLogImplementation 会查找是不是自己定义实现的 Log 全路径，如果有就根据这个 class 全路径创建 log，如果没有就按照顺序创建 log 实例，顺序如下：
+    - org.apache.commons.logging.impl.Log4JLogger
     - org.apache.commons.logging.impl.Jdk14Logger
     - org.apache.commons.logging.impl.Jdk13LumberjackLogger
     - org.apache.commons.logging.impl.SimpleLog
