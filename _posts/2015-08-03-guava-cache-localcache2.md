@@ -128,6 +128,65 @@ static class WeakEntry<K, V> extends WeakReference<K> implements ReferenceEntry<
 
 在 CacheBuilder 设置 value 的引用类型：
 
+现实是 ValueReference 接口实现：
+
+```java
+/**
+     * A reference to a value.
+     */
+    interface ValueReference<K, V> {
+        /**
+         * Returns the value. Does not block or throw exceptions.
+         */
+        @Nullable
+        V get();
+
+        /**
+         * Waits for a value that may still be loading. Unlike get(), this method can block (in the case of
+         * FutureValueReference).
+         * 
+         * @throws ExecutionException if the loading thread throws an exception
+         * @throws ExecutionError if the loading thread throws an error
+         */
+        V waitForValue() throws ExecutionException;
+
+        /**
+         * Returns the weight of this entry. This is assumed to be static between calls to setValue.
+         */
+        int getWeight();
+
+        /**
+         * Returns the entry associated with this value reference, or {@code null} if this value reference is
+         * independent of any entry.
+         */
+        @Nullable
+        ReferenceEntry<K, V> getEntry();
+
+        /**
+         * 为一个指定的entry创建一个该引用的副本
+         * <p>
+         * {@code value} may be null only for a loading reference.
+         */
+        ValueReference<K, V> copyFor(ReferenceQueue<V> queue, @Nullable V value, ReferenceEntry<K, V> entry);
+
+        /**
+         * 告知一个新的值正在加载中。这个只会关联到加载值引用。
+         */
+        void notifyNewValue(@Nullable V newValue);
+
+        /**
+         * 当一个新的value正在被加载的时候，返回true。不管是否已经有存在的值。这里加锁方法返回的值对于给定的ValueReference实例来说是常量。
+         * 
+         */
+        boolean isLoading();
+
+        /**
+         * 返回true，如果该reference包含一个活跃的值,意味着在cache里仍然有一个值存在。活跃的值包含：cache查找返回的，等待被移除的要被驱赶的值； 非激活的包含：正在加载的值，
+         */
+        boolean isActive();
+    }
+```
+
 ```java
 public CacheBuilder<K, V> softValues() {
     return setValueStrength(Strength.SOFT);
