@@ -115,7 +115,7 @@ interface ReferenceEntry<K, V> {
 
 下图是 ReferenceEntry 的继承体系图：
 
-![ReferenceEntry]()
+![ReferenceEntry](http://renchx.com/public/images/ReferenceEntry.png)
 
 具体实现比较简单只举个简单例子：
 
