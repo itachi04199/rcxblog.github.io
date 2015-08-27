@@ -315,9 +315,11 @@ protected void returnConnection(PooledConnection con) {
                     if (!shouldClose(con,PooledConnection.VALIDATE_RETURN)) {//判断当前连接是否需要真实关闭
                         con.setStackTrace(null);
                         con.setTimestamp(System.currentTimeMillis());
-                        if (((idle.size()>=poolProperties.getMaxIdle()) && !poolProperties.isPoolSweeperEnabled()) || (!idle.offer(con))) {// 判断空闲队列大于最大空闲数量，或者添加到空闲队列失败，会释放这个连接
+                        if (((idle.size()>=poolProperties.getMaxIdle()) && !poolProperties.isPoolSweeperEnabled()) ||
+                         (!idle.offer(con))) {// 判断空闲队列大于最大空闲数量，或者添加到空闲队列失败，会释放这个连接
                             if (log.isDebugEnabled()) {
-                                log.debug("Connection ["+con+"] will be closed and not returned to the pool, idle["+idle.size()+"]>=maxIdle["+poolProperties.getMaxIdle()+"] idle.offer failed.");
+                                log.debug("Connection ["+con+"] will be closed and not returned to the pool,
+                                idle["+idle.size()+"]>=maxIdle["+poolProperties.getMaxIdle()+"] idle.offer failed.");
                             }
                             release(con);
                         }
