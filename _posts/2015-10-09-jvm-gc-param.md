@@ -10,6 +10,7 @@ tags: 笔记 java
 - 布尔型参数选项：-XX:+ 打开， -XX:- 关闭。（比如-XX:+PrintGCDetails）
 - 数字型参数选项通过-XX:=设定。数字可以是 m/M(兆字节)，k/K(千字节)，g/G(G字节)。比如：32K表示32768字节。（-XX:NewSize=256m）
 - 字符行参数选项通过-XX:=设定，通常用来指定一个文件，路径，或者一个命令列表。（-XX:HeapDumpPath=./java_pid.hprof）
+
 命令 java -help可以列出java 应用启动时标准选项（不同的JVM实现是不同的）。java -X可以列出不标准的参数（这是JVM的扩展特性）。-X相关的选项不是标准的，被改变也不会通知。如果你想查看当前应用使用的JVM参数，你可以使用：ManagementFactory.getRuntimeMXBean().getInputArguments()。
 
 
