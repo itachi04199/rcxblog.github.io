@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java Executor 框架学习
+title: Java Executor 框架学习
 categories: java基础
 tags: 笔记, java
 ---
