@@ -137,4 +137,3 @@ java8 可以在接口当中添加静态方法，便于把一些工具方法加�
 1. [写给大忙人看的Java SE 8](http://book.douban.com/subject/26274206/)
 
 ---EOF---
-
